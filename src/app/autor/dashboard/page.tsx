@@ -17,7 +17,7 @@ interface ArticleMeta {
     slug: string;
 }
 
-const SANITY_STUDIO_URL = "http://localhost:3334";
+const SANITY_STUDIO_URL = process.env.NEXT_PUBLIC_SANITY_STUDIO_URL || "http://localhost:3334";
 
 export default function AuthorDashboardPage() {
     const [articles, setArticles] = useState<ArticleMeta[]>([]);

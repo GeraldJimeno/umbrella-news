@@ -20,7 +20,11 @@ interface NewsTableProps {
     studioUrl?: string;
 }
 
-export default function NewsTable({ initialNews, isAdmin = false, studioUrl = "http://localhost:3334" }: NewsTableProps) {
+export default function NewsTable({ 
+  initialNews, 
+  isAdmin = false, 
+  studioUrl = process.env.NEXT_PUBLIC_SANITY_STUDIO_URL || "http://localhost:3334" 
+}: NewsTableProps) {
     const [activeTab, setActiveTab] = useState<'all' | 'draft' | 'published'>('all');
     
     const allCount = initialNews.length;

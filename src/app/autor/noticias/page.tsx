@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getAuthorNews } from "@/lib/sanity/actions";
 import NewsTable from "@/components/NewsDashboard/NewsTable";
 
-const SANITY_STUDIO_URL = "http://localhost:3334";
+const SANITY_STUDIO_URL = process.env.NEXT_PUBLIC_SANITY_STUDIO_URL || "http://localhost:3334";
 
 export default async function AuthorNewsPage() {
     const supabase = await createClient();

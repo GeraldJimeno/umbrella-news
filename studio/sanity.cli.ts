@@ -7,5 +7,6 @@ export default defineCliConfig({
   },
   server: {
     port: 3334,
-  }
+  },
+  studioHost: 'umbrella-news-cms'
 })

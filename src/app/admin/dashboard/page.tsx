@@ -3,7 +3,7 @@ import { PlusCircle, UserPlus, Users, Layers } from 'lucide-react';
 import { getAdminDashboardData } from '@/lib/sanity/actions';
 import { createClient } from '@/lib/supabase/server';
 
-const SANITY_STUDIO_URL = "http://localhost:3334";
+const SANITY_STUDIO_URL = process.env.NEXT_PUBLIC_SANITY_STUDIO_URL || "http://localhost:3334";
 
 export default async function AdminDashboardPage() {
     // 1. Fetch Sanity Data

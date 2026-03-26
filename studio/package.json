@@ -1,0 +1,23 @@
+{
+  "name": "umbrella-news-studio",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "sanity": "^3.75.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13",
+    "lucide-react": "^0.460.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
